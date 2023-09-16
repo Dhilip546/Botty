@@ -1,0 +1,149 @@
+ {
+    "gen_qa_pairs": [
+        {
+            "question": "How do I reset my password?",
+            "answer": "To reset your password, go to our website's login page and click on the 'Forgot Password' link. Follow the instructions sent to your email."
+        },
+        {
+            "question": "What are your business hours?",
+            "answer": "We are open from Monday to Friday, 9 AM to 5 PM, excluding holidays."
+        },
+        {
+            "question": "Hii",
+            "answer": "Hello! How can I assist you today?"
+        },
+        {
+            "question": "How can I contact your support team?",
+            "answer": "You can reach our support team by emailing support@example.com or calling our toll-free number at 1-800-123-4567."
+        },
+        {
+            "question": "What payment methods do you accept?",
+            "answer": "We accept major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers as payment methods."
+        },
+        {
+            "question": "Is there a mobile app for your service?",
+            "answer": "Yes, we have a mobile app available for both Android and iOS devices. You can download it from the respective app stores."
+        },
+        {
+            "question": "How can I update my account information?",
+            "answer": "To update your account information, log in to your account and navigate to the 'Profile' or 'Account Settings' section."
+        },
+        {
+            "question": "What is your company's mission?",
+            "answer": "Our company's mission is to provide high-quality products and excellent customer service to meet our customers' needs."
+        },
+        {
+            "question": "Can I change my subscription plan?",
+            "answer": "Yes, you can change your subscription plan at any time by going to your account settings and selecting a different plan."
+        }
+    ],
+    "product_qa_pairs": [
+        {
+            "question": "Can you tell me about your product's pricing plans?",
+            "answer": "We offer three pricing plans: Basic, Pro, and Premium. Each plan has different features and pricing. You can compare them on our Pricing page."
+        },
+        {
+            "question": "What is the customer satisfaction guarantee for your product?",
+            "answer": "We offer a 100% satisfaction guarantee. If you're not satisfied with our product, contact our support team within 30 days, and we'll refund your purchase."
+        },
+        {
+            "question": "Is there a free trial for your product?",
+            "answer": "Yes, we offer a 14-day free trial of our product. You can sign up on our website to get started with the trial."
+        },
+        {
+            "question": "Do you offer any discounts for students or non-profit organizations?",
+            "answer": "Yes, we have special discounts for students and non-profit organizations. Please contact our sales team to inquire about eligibility and discounts."
+        },
+        {
+            "question": "Are there any upcoming product releases or updates?",
+            "answer": "We regularly release updates and improvements to our product. Stay tuned to our blog or newsletter for announcements."
+        },
+        {
+            "question": "Can I use your product on multiple devices?",
+            "answer": "Yes, you can use our product on multiple devices. Just log in with your account credentials on each device."
+        },
+        {
+            "question": "Is there a user manual or documentation for your product?",
+            "answer": "Yes, we provide user manuals and documentation for our product on our website. You can download them for reference."
+        }
+    ],
+    "order_shipping_qa_pairs": [
+        {
+            "question": "Do you offer international shipping?",
+            "answer": "Yes, we offer international shipping to customers worldwide. Shipping costs and delivery times may vary by location."
+        },
+        {
+            "question": "What courier services do you use for shipping?",
+            "answer": "We use reputable courier services such as FedEx, UPS, and DHL for our shipping services."
+        },
+        {
+            "question": "Can I change the shipping address after placing an order?",
+            "answer": "Yes, you can change the shipping address before the order is shipped. Please contact our support team as soon as possible to make the change."
+        },
+        {
+            "question": "How can I track my international order?",
+            "answer": "You can track your international order using the tracking number provided in your order confirmation email."
+        },
+        {
+            "question": "What should I do if my order arrives damaged?",
+            "answer": "If your order arrives damaged, please contact our support team immediately, and we will assist you with a replacement."
+        }
+    ],
+    "returns_refunds_qa_pairs": [
+        {
+            "question": "Can I return a product if I've opened the packaging?",
+            "answer": "Yes, you can return a product even if you've opened the packaging. Our return policy allows returns within 30 days of purchase."
+        },
+        {
+            "question": "What is your warranty policy for products?",
+            "answer": "We offer a one-year warranty on all our products. If you experience any defects or issues, please contact us for warranty support."
+        },
+        {
+            "question": "How do I initiate a return for a product?",
+            "answer": "To initiate a return, log in to your account, go to the 'Order History' section, and select the order you want to return. Follow the provided instructions."
+        },
+        {
+            "question": "What is your policy on digital product refunds?",
+            "answer": "We generally do not offer refunds for digital products, but exceptions may apply. Please reach out to our support for assistance."
+        },
+        {
+            "question": "Can I exchange a product for a different model?",
+            "answer": "Yes, we offer product exchanges for different models. Contact our support team to initiate an exchange."
+        }
+    ],
+    "common_chats": [
+        {
+            "question": "Hi,Hello",
+            "answer": "Hello! How can I assist you today?"
+        },
+        {
+            "question": "How are you?",
+            "answer": "I'm just a computer program, but I'm here to help you. How can I assist you?"
+        },
+        {
+            "question": "Good morning!",
+            "answer": "Good morning! How can I assist you today?"
+        },
+        {
+            "question": "Thank you!",
+            "answer": "You're welcome! If you have any more questions or need assistance, feel free to ask."
+        },
+        {
+            "question": "What's your name?",
+            "answer": "I'm a virtual assistant created to assist you. You can call me 'Assistant.' How can I help you today?"
+        },
+        {
+            "question": "Tell me a joke!",
+            "answer": "Sure, here's one: Why don't scientists trust atoms? Because they make up everything!"
+        },
+        {
+            "question": "How can I learn more about your company?",
+            "answer": "You can visit our website's 'About Us' page to learn more about our company's history and mission."
+        },
+        {
+            "question": "Can you recommend a book or movie?",
+            "answer": "Of course! What genre are you interested in, and do you have any preferences?"
+        }
+    ]
+}
+

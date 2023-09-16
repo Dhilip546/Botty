@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 80vh; /* Adjust the chat container height as needed */
+            animation: fadeIn 0.5s;
+        }
+
+        .chat-header {
+            background-color: #0074cc;
+            color: #fff;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+
+        .chat-area {
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+            flex-grow: 1;
+            width: 100%;
+        }
+
+        .user-input {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #0074cc;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #0056a0;
+        }
+
+        /* Define styles for chat messages */
+        .user-message {
+            background-color: #0074cc;
+            color: #fff;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 10px;
+            align-self: flex-end;
+            max-width: 70%;
+            word-wrap: break-word;
+            animation: fadeInUp 0.5s;
+        }
+
+        .chatbot-message {
+            background-color: #eee;
+            color: #333;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 10px;
+            align-self: flex-start;
+            max-width: 70%;
+            word-wrap: break-word;
+            animation: fadeInUp 0.5s;
+        }
+
+        /* Animation for fading in messages */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for fading in the chat container */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Styles for feedback container */
+        .feedback-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #0074cc;
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            animation: fadeInUp 0.5s;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        #thumbs-up, #thumbs-down {
+            background-color: #fff;
+            color: #0074cc;
+            border: none;
+            font-size: 20px;
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        #thumbs-up:hover, #thumbs-down:hover {
+            background-color: #0074cc;
+            color: #fff;
+        }
+
+        #feedback-comment {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        #submit-feedback-button {
+            background-color: #fff;
+            color: #0074cc;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        #submit-feedback-button:hover {
+            background-color: #0074cc;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            Chatbot
+        </div>
+        <div class="chat-area" id="chat-area">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="user-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <!-- Feedback container -->
+    <div class="feedback-container">
+        <p>Was this response helpful?</p>
+        <button id="thumbs-up">👍</button>
+        <button id="thumbs-down">👎</button>
+        <textarea id="feedback-comment" placeholder="Add a comment (optional)"></textarea>
+        <button id="submit-feedback-button">Submit Feedback</button>
+    </div>
+    <script>
+        // Add your JavaScript code here
+        const chatArea = document.getElementById("chat-area");
+        const userInput = document.getElementById("user-input");
+        const sendButton = document.getElementById("send-button");
+        const thumbsUpButton = document.getElementById("thumbs-up");
+        const thumbsDownButton = document.getElementById("thumbs-down");
+        const feedbackComment = document.getElementById("feedback-comment");
+        const submitFeedbackButton = document.getElementById("submit-feedback-button");
+
+        sendButton.addEventListener("click", () => {
+            const userMessage = userInput.value.trim();
+            if (userMessage === "") return;
+
+            // Display user message
+            const userMessageElement = document.createElement("div");
+            userMessageElement.classList.add("user-message");
+            userMessageElement.textContent = userMessage;
+            chatArea.appendChild(userMessageElement);
+
+            // Send the user message to the server and get a response
+            fetch("/process_message", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ message: userMessage }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    // Display chatbot's response
+                    const chatbotMessageElement = document.createElement("div");
+                    chatbotMessageElement.classList.add("chatbot-message");
+                    chatbotMessageElement.textContent = data.message;
+                    chatArea.appendChild(chatbotMessageElement);
+
+                    // Clear user input
+                    userInput.value = "";
+
+                    // Scroll to the bottom of the chat area
+                    chatArea.scrollTop = chatArea.scrollHeight;
+                })
+                .catch((error) => console.error("Error:", error));
+        });
+
+        // Listen for Enter key press in the input field
+        userInput.addEventListener("keyup", (event) => {
+            if (event.key === "Enter") {
+                sendButton.click();
+            }
+        });
+
+        // Feedback handling
+        thumbsUpButton.addEventListener("click", () => {
+            submitFeedback("positive");
+        });
+
+        thumbsDownButton.addEventListener("click", () => {
+            submitFeedback("negative");
+        });
+
+        submitFeedbackButton.addEventListener("click", () => {
+            submitFeedback("other");
+        });
+
+        function submitFeedback(sentiment) {
+            const comment = feedbackComment.value.trim();
+            // Send feedback data to the server for storage and analysis
+            fetch("/submit_feedback", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ sentiment, comment }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    // Handle feedback submission response if needed
+                    console.log("Feedback submitted:", data);
+                })
+                .catch((error) => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
