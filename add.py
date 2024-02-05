@@ -5,7 +5,7 @@ import datetime
 
 app = Flask(__name__)
 
-# Load your QA pairs here
+
 def load_qa_pairs(filename):
     try:
         with open(filename, 'r', encoding='utf-8') as file:
@@ -17,7 +17,7 @@ def load_qa_pairs(filename):
 
 qa_pairs = load_qa_pairs("qa_pairs.json")
 
-# Load the chatbot model
+
 bot = pipeline("conversational")
 
 @app.route("/")
@@ -39,16 +39,14 @@ def submit_feedback():
     comment = feedback_data.get("comment", "")
     
     if sentiment and comment:
-        # Store feedback data in a JSON file with a timestamp
+        
         timestamp = datetime.datetime.now().isoformat()
         feedback_entry = {"timestamp": timestamp, "sentiment": sentiment, "comment": comment}
         with open("feedback.json", "a", encoding="utf-8") as feedback_file:
             json.dump(feedback_entry, feedback_file, ensure_ascii=False)
             feedback_file.write("\n")
         
-        # Perform basic analysis here (e.g., count positive/negative feedback)
-
-        # Return a simple acknowledgment
+        
         return jsonify({"status": "Feedback received"})
 
     return jsonify({"error": "Invalid feedback data"}), 400
