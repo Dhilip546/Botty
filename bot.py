@@ -22,7 +22,7 @@ def get_response(user_input, qa_pairs):
     return "I'm sorry, I don't have the answer to that question."
 
 def main():
-    qa_filename = "qa_pairs.json"  # Replace with the path to your JSON file
+    qa_filename = "qa_pairs.json" 
     qa_pairs = load_qa_pairs(qa_filename)
 
     print("Chatbot: Hello! How can I assist you today? (Type 'exit' to end the conversation)")
