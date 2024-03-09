@@ -143,7 +143,93 @@
         {
             "question": "Can you recommend a book or movie?",
             "answer": "Of course! What genre are you interested in, and do you have any preferences?"
-        }
-    ]
+        }],
+        "qa_pairs": [
+                {
+                    "question": "What is your return policy?",
+                    "answer": "Our return policy allows returns within 30 days of purchase. Please refer to our website for more details."
+                },
+                {
+                    "question": "Do you offer free shipping?",
+                    "answer": "Yes, we offer free shipping on orders over $50. Some exclusions may apply."
+                },
+                {
+                    "question": "How can I track my order?",
+                    "answer": "You can track your order by logging into your account on our website or by using the tracking number provided in your order confirmation email."
+                },
+                {
+                    "question": "What is your customer support response time?",
+                    "answer": "Our customer support team typically responds to inquiries within 24-48 hours. However, response times may vary depending on the volume of inquiries."
+                },
+                {
+                    "question": "Can I cancel my order after it's been placed?",
+                    "answer": "You may be able to cancel your order if it has not yet been processed for shipping. Please contact our customer support team as soon as possible to request a cancellation."
+                },
+                {
+                    "question": "Where can I find product reviews?",
+                    "answer": "You can find product reviews on our website's product pages. Customers often leave reviews and ratings based on their experiences."
+                },
+                {
+                    "question": "How do I unsubscribe from marketing emails?",
+                    "answer": "To unsubscribe from marketing emails, click on the 'Unsubscribe' link at the bottom of any marketing email you receive from us."
+                },
+                {
+                    "question": "Do you offer gift wrapping?",
+                    "answer": "Yes, we offer gift wrapping services for an additional fee. You can select this option during the checkout process."
+                },
+                {
+                    "question": "What is your privacy policy?",
+                    "answer": "Our privacy policy outlines how we collect, use, and protect your personal information. You can find it on our website."
+                },
+                {
+                    "question": "Are your products environmentally friendly?",
+                    "answer": "We strive to offer environmentally friendly products whenever possible. Look for eco-friendly labels on our product descriptions."
+                }
+            ],
+            "a_pairs": [
+                {
+                    "question": "How do I create an account?",
+                    "answer": "To create an account, go to our website's signup page and fill out the required information. Then, click on the 'Sign Up' button to create your account."
+                },
+                {
+                    "question": "Where can I find your store locations?",
+                    "answer": "You can find our store locations by visiting the 'Store Locator' page on our website. Simply enter your location to find the nearest store."
+                },
+                {
+                    "question": "What is your return policy?",
+                    "answer": "Our return policy allows returns within 30 days of purchase for a full refund. Items must be unused and in their original packaging."
+                },
+                {
+                    "question": "Do you offer gift cards?",
+                    "answer": "Yes, we offer gift cards that can be purchased online or in-store. They can be used for purchases on our website or at any of our physical locations."
+                },
+                {
+                    "question": "How do I track my order?",
+                    "answer": "You can track your order by logging into your account and navigating to the 'Order History' section. From there, you can view the status of your order and track its shipment."
+                },
+                {
+                    "question": "What languages do you support?",
+                    "answer": "We support multiple languages, including English, Spanish, French, German, and more. You can change the language preference in your account settings."
+                },
+                {
+                    "question": "Do you offer price matching?",
+                    "answer": "Yes, we offer price matching for identical items from authorized retailers. Please contact our customer service team for more information."
+                },
+                {
+                    "question": "How can I provide feedback about my experience?",
+                    "answer": "We welcome feedback from our customers! You can provide feedback by emailing our customer service team or filling out our online feedback form."
+                },
+                {
+                    "question": "What are your shipping options?",
+                    "answer": "We offer standard, expedited, and express shipping options for domestic and international orders. Shipping costs and delivery times may vary."
+                },
+                {
+                    "question": "Can I cancel my order?",
+                    "answer": "You may be able to cancel your order if it has not yet been processed. Please contact our customer service team as soon as possible to inquire about cancellation."
+                }
+            ]
+        
+        
+    
 }
 
